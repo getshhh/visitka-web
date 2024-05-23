@@ -1,0 +1,17 @@
+{%extends 'base.html' %}
+
+{% block titile %}
+Записаться на курс
+{% endblock %}
+
+{% block body %}
+<div class="about">
+    <div class="scroll">
+        <img src="{{ url_for('static', filename='css/1.png') }}" width="1500" height="871">
+        <img src="{{ url_for('static', filename='css/2.png') }}" width="1000" height="500">
+        <div class="center-container">
+            <a href="payment" class="button">Запись</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

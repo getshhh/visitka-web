@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Сайт визитка
+{% endblock %}
+
+{% block body %}
+<div class="main">
+    <div class="text-main">
+        <img src="{{ url_for('static', filename='css/ava.png') }}" width="250" height="250">
+        <h1>Иванов Иван</h1>
+        <p>Преподаватель - программист - разработчик</p>
+        <a href="about" class="button">Запись на курс</a>
+    </div>
+</div>
+{% endblock %}
