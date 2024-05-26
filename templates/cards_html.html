@@ -1,0 +1,35 @@
+{% extends 'cards.html' %}
+
+{% block title %}
+  Cards
+{% endblock %}
+
+{% block body %}
+<div class="main">
+    <header>
+        <h1 class="main_heading">Main Heading</h1>
+    </header>
+    <section class="cards">
+        <div class="cards_inner">
+            <div class="card">
+                <div class="card_front">
+                    <img src="{{ url_for('static', filename='css/london.png') }}" alt="London">
+                    <h2>London</h2>
+                </div>
+                <div class="card_back london_back">
+                    <p>Welcome to London!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_front">
+                    <img src="{{ url_for('static', filename='css/paris.png') }}" alt="Paris">
+                    <h2>Paris</h2>
+                </div>
+                <div class="card_back paris_back">
+                    <p>Bienvenue à Paris!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

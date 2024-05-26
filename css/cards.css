@@ -1,0 +1,116 @@
+/* main.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("back.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #eceff1;
+}
+
+.main {
+    max-width: 90rem;
+    padding: 3em 1.5em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.main_heading {
+    font-weight: 600;
+    font-size: 2.25em;
+    margin-bottom: 0.75em;
+    text-align: center;
+    color: #eceff1;
+}
+
+.cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cards_inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 20rem;
+    height: 25rem;
+    perspective: 1000px;
+}
+
+.card_front,
+.card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.card_front {
+    background-color: transparent;
+}
+
+.card_back {
+    background-size: cover;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card:hover .card_front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card_back {
+    transform: rotateY(360deg);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card h2 {
+    margin-top: 1em;
+}
+
+.card:nth-child(1) .card_front {
+    --hue: 165;
+    --saturation: 82.26%;
+    --lightness: 51.37%;
+    background-color: hsl(var(--hue), var(--saturation), var(--lightness));
+}
+
+.card:nth-child(2) .card_front {
+    --hue: 291.34;
+    --saturation: 95.9%;
+    --lightness: 61.76%;
+    background-color: hsl(var(--hue), var(--saturation), var(--lightness));
+}
+
+/* Background images for card backs */
+.card_back.london_back {
+    background: url('back_L.png') no-repeat center center/cover;
+}
+
+.card_back.paris_back {
+    background: url('back_p.png') no-repeat center center/cover;
+}
